@@ -1,0 +1,50 @@
+.header__container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: lightskyblue;
+  height: 80px;
+}
+
+.header__container + div {
+  height: 0;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.header__content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header__item {
+  flex: 0 1 auto;
+}
+
+.header__spacer {
+  flex: 1 0 auto;
+}
+
+.header__title {
+  color: #fff;
+  line-height: 0;
+  font-weight: normal;
+  pointer-events: none;
+}
+
+.header__actions {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__action-button {
+  flex: 1 0 auto;
+  height: 30px;
+  width: 30px;
+}
+
+.header__action-button:not(:last-child) {
+  margin-right: 15px;
+}
