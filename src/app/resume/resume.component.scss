@@ -31,7 +31,23 @@
     pointer-events: none;
   }
   & p {
+    padding: 0 20px;
     margin-top: 30px;
+    max-width: 800px;
+    position: relative;
+    text-align: left;
+    &::before {
+      content: '';
+      width: 70%;
+      border-top: 1px solid #ddd;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include sm {
+      text-align: center;
+    }
   }
 }
 

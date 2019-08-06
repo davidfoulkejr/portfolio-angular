@@ -1,5 +1,41 @@
+@import 'src/app/core/shared/styles/breakpoints';
+
 .footer__container {
-  height: 80px;
   width: 100%;
   background-color: navy;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  color: white;
+  font-weight: 100;
+}
+
+.footer__section {
+  flex-basis: 100%;
+  text-align: center;
+  & ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  & > div {
+    padding: 0 20px;
+  }
+  &:last-child {
+    padding-bottom: 10px;
+  }
+}
+
+.footer__contact {
+  display: flex;
+  margin: 0 auto;
+  max-width: 300px;
+  padding: 10px 0;
+  & svg {
+    height: 20px;
+  }
+  & span {
+    text-align: center;
+    flex-grow: 1;
+  }
 }
