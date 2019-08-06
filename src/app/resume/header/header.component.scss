@@ -1,29 +1,35 @@
+@import 'src/app/core/shared/styles/breakpoints';
+
 .header__container {
   position: absolute;
   top: 0;
   width: 100%;
   background-color: lightskyblue;
   height: 80px;
-}
-
-.header__container + div {
-  height: 0;
-  width: 100%;
-  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  // center child element(s)
+  & > div {
+    flex-grow: 1;
+  }
+  // secret buffer underneath header
+  & + div {
+    height: 0;
+    width: 100%;
+    margin-top: 80px;
+  }
 }
 
 .header__content {
   height: 100%;
+  max-width: 1200px;
   display: flex;
   align-items: center;
-}
-
-.header__item {
-  flex: 0 1 auto;
-}
-
-.header__spacer {
-  flex: 1 0 auto;
+  padding: 0 20px;
+  // breakpoint handling
+  @include xl {
+    padding: 0;
+  }
 }
 
 .header__title {
@@ -43,8 +49,7 @@
   flex: 1 0 auto;
   height: 30px;
   width: 30px;
-}
-
-.header__action-button:not(:last-child) {
-  margin-right: 15px;
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
 }
