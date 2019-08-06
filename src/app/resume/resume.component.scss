@@ -1,6 +1,7 @@
 @import 'src/app/core/shared/styles/breakpoints';
 
 .resume__section {
+  font-size: 1.1em;
   width: 100%;
   min-height: 300px;
   padding: 40px 0;
@@ -42,10 +43,9 @@
 }
 
 .resume__highlights__content {
-  position: relative;
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
+  align-items: flex-start;
   & svg {
     height: 80px;
     padding-top: 20px;
@@ -55,6 +55,7 @@
 
 .resume__flex-column {
   flex-basis: 100%;
+  text-align: justify;
   & > div {
     padding: 0 40px;
     margin: 1em 0;
